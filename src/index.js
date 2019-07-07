@@ -14,6 +14,7 @@ import thunkMiddleware from "redux-thunk";
 // reducers
 import { searchRobots, requestRobots } from "./reducers";
 
+console.log("thu nghiem");
 const logger = createLogger(); // KHông nên gọi trực tiếp function
 
 const rootReducer = combineReducers({
@@ -23,7 +24,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunkMiddleware, logger)
+  applyMiddleware(thunkMiddleware)
 );
 
 ReactDOM.render(
